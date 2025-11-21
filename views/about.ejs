@@ -1,0 +1,41 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<main>
+  <div class="jumbotron jumbotron-fluid text-center bg-light">
+    <div class="container py-4">
+      <h1 class="display-4">About Me</h1>
+      <p class="lead">
+        I am <strong>Piratheesh Gunaseelan</strong>, an Information Technology student at 
+        <strong>Ontario Tech University</strong> specializing in Networking and IT Security.
+      </p>
+    </div>
+  </div>
+
+  <section class="text-center my-4">
+    <img src="/images/profile.jpg" alt="Photo of Piratheesh Gunaseelan" class="img-fluid rounded shadow-sm" style="max-width:300px;">
+  </section>
+
+  <section class="container text-center">
+    <p>
+      I have hands-on experience in cybersecurity, IT infrastructure, and operational security, 
+      with roles including <em>Security Operations Center Architect</em> at Ontario Tech University 
+      and <em>IT Intern</em> with the Toronto Police Service.
+    </p>
+    <p>
+      My work has involved network deployment, compliance documentation, SOC integration, and IT systems management. 
+      I have developed skills in Python, Bash, PowerShell, and enterprise networking throughout my studies.
+    </p>
+  </section>
+
+  <section class="text-center my-5">
+    <h2 class="h4">Intro Video</h2>
+    <video width="480" height="270" controls poster="/images/thumbnail.png">
+      <source src="/assets/media/WebnScript.mp4" type="video/mp4">
+      Your browser doesn't support the video tag.
+    </video>
+  </section>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
