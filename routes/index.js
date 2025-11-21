@@ -4,30 +4,22 @@ var router = express.Router();
 /* Home */
 router.get('/', function(req, res, next) {
   res.render('index', { 
-    title: 'Home' });
+    title: 'Home' 
+  });
 });
 
 router.get('/home', function(req, res, next) {
   res.render('index', { 
-    title: 'Home' });
+    title: 'Home' 
+  });
 });
 
-/* About */
-router.get('/about', (req, res) => {
-  res.render('about', { 
-    title: 'About' });
-});
-
-/* Projects */
-router.get('/projects', (req, res) => {
-  res.render('projects', { 
-    title: 'Projects' });
-});
-
-/* Contact */
-router.get('/contact', (req, res) => {
-  res.render('contact', { 
-    title: 'Contact' });
+/* Travel Bucket List */
+router.get('/travel', function(req, res, next) {
+  res.render('travel', { 
+    title: 'Travel Bucket List' 
+  });
 });
 
 module.exports = router;
+
