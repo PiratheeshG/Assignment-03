@@ -3,55 +3,49 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-let mongoose = require('mongoose');
 
-let DB = require('./db');
+// ROUTERS
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let destinationRouter = require('../routes/destination');  // <-- singular here
+let destinationRouter = require('../routes/destination');
 
 let app = express();
 
-// test DB connection 
-mongoose.connect(DB.URI);
-let mongoDB = mongoose.connection;
-mongoDB.on('error', console.error.bind(console, 'Connection error'));
-mongoDB.once('open', () => {
-  console.log('Connected to mongoDB');
-});
-
-// view engine setup
+// VIEW ENGINE SETUP
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
+// MIDDLEWARE
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// STATIC FILES
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+// ROUTES
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/destinations', destinationRouter);   // URL path is plural, file is singular
+app.use('/destinations', destinationRouter);
 
-// catch 404 and forward to error handler
+// 404 HANDLER MUST BE LAST
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// ERROR HANDLER
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   res.status(err.status || 500);
-  res.render('error', {
-    title: "Error"
-  });
+  res.render('error');
 });
 
 module.exports = app;
+
 
 
 
