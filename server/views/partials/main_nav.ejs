@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Country Bucket List Tracker</a>
+    <a class="navbar-brand fw-bold text-primary" href="/">Country Bucket List Tracker</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
 
-        <!-- Home -->
+        
         <li class="nav-item">
           <% if (title == 'Home') { %>
-            <a class="nav-link active" href="/home"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="nav-link active text-primary" href="/home"><i class="fa-solid fa-house"></i> Home</a>
           <% } else { %>
             <a class="nav-link" href="/home"><i class="fa-solid fa-house"></i> Home</a>
           <% } %>
         </li>
 
-        <!-- Destinations (list page with Add/Edit/Delete buttons) -->
+        
         <li class="nav-item">
           <% if (title == 'Destinations') { %>
-            <a class="nav-link active" href="/destinations"><i class="fa-solid fa-map-location-dot"></i> Destinations</a>
+            <a class="nav-link active text-primary" href="/destinations"><i class="fa-solid fa-map-location-dot"></i> Destinations</a>
           <% } else { %>
             <a class="nav-link" href="/destinations"><i class="fa-solid fa-map-location-dot"></i> Destinations</a>
           <% } %>
@@ -30,3 +30,4 @@
     </div>
   </div>
 </nav>
+

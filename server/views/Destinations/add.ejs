@@ -1,0 +1,71 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- content for adding a destination -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="countryNameTextField">Country Name</label>
+                    <input type="text" class="form-control"
+                    id="countryNameTextField"
+                    placeholder="Enter the country name"
+                    name="countryName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="citiesTextField">Cities</label>
+                    <input type="text" class="form-control"
+                    id="citiesTextField"
+                    placeholder="Enter specific cities you want to visit"
+                    name="cities" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="attractionsTextField">Tourist Attractions</label>
+                    <input type="text" class="form-control"
+                    id="attractionsTextField"
+                    placeholder="Enter attractions you want to see"
+                    name="attractions" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="foodsTextField">Foods to Try</label>
+                    <input type="text" class="form-control"
+                    id="foodsTextField"
+                    placeholder="Enter foods you want to try"
+                    name="foods" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="budgetTextField">Budget Needed</label>
+                    <input type="number" class="form-control"
+                    id="budgetTextField"
+                    placeholder="Enter your estimated budget"
+                    name="budget" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notesTextField">Notes</label>
+                    <input type="text" class="form-control"
+                    id="notesTextField"
+                    placeholder="Enter additional notes"
+                    name="notes" required>
+                </div>
+
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/destinations" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>

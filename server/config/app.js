@@ -8,7 +8,7 @@ let mongoose = require('mongoose');
 let DB = require('./db');
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
-let destinationRouter = require('../routes/destination');  // <-- matches your folder
+let destinationRouter = require('../routes/destination');  // <-- singular here
 
 let app = express();
 
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/destinations', destinationRouter);  // <-- URL path matches assignment
+app.use('/destinations', destinationRouter);   // URL path is plural, file is singular
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -52,5 +52,7 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
 
 

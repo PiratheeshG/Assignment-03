@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 
 // CRUD --> Read
 
-let Destination = require('../models/destination');
+let Destination = require('../model/destinations');
 
 // get --> extract and read smth
 // post --> post smth
@@ -135,3 +135,4 @@ router.get('/delete/:id', async(req, res, next) => {
 })
 
 module.exports = router;
+
