@@ -47,17 +47,18 @@ router.get('/add',async(req,res,next)=>{
     }
 
 })
+
 // Post route for processing the Add Page - Create Operation
 router.post('/add',async(req,res,next)=>{
     try
     {
         let NewAdventure = Adventure({
-            "Country":req.body.country,
-            "Cities to Visit":req.body.city,
-            "Tourist Attractions":req.body.touristAttractions,
-            "Foods to Try":req.body.food,
-            "Budget":req.body.budget,
-            "Notes":req.body.notes,
+            country: req.body.country,
+            city: req.body.city,
+            touristAttractions: req.body.touristAttractions,
+            food: req.body.food,
+            budget: req.body.budget,
+            notes: req.body.notes,
         });
         Adventure.create(NewAdventure).then(()=>{
             res.redirect('/adventures')
@@ -71,6 +72,7 @@ router.post('/add',async(req,res,next)=>{
         })
     }
 })
+
 // Get route for displaying the Edit Page - Update Operation
 router.get('/edit/:id',async(req,res,next)=>{
     try
@@ -85,10 +87,12 @@ router.get('/edit/:id',async(req,res,next)=>{
         })
     }
 })
+
 // Post route for processing the Edit Page - Update Operation
 router.get('/edit/:id',async(req,res,next)=>{
 
 })
+
 // Get route for performing delete operation - Delete Operation
 router.get('/delete/:id',async(req,res,next)=>{
 
