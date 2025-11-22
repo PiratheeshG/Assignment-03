@@ -2,19 +2,32 @@
 <%- include ./partials/main_nav.ejs %>
 
 <main>
+  <!-- Splash / Hero Section -->
   <div class="jumbotron jumbotron-fluid text-center bg-light">
     <div class="container py-4">
-      <h1 class="display-4">Welcome!</h1>
+      <h1 class="display-4">Welcome to My Travel Bucket List</h1>
       <p class="lead">
-        My name is Piratheesh Gunaseelan. I am a student at Ontario Tech University
-        aspiring to pursue a career in Cybersecurity.
+        Plan, track, and organize all the countries and cities you dream to explore.
+        This app lets you store your adventures, update them, and build your ideal travel journey.
       </p>
+
+      <a href="/adventures" class="btn btn-primary btn-lg mt-3">
+        <i class="fas fa-map-marked-alt"></i> View Adventures
+      </a>
+
+      <a href="/adventures/add" class="btn btn-outline-secondary btn-lg mt-3">
+        <i class="fas fa-plus"></i> Add a New Adventure
+      </a>
     </div>
   </div>
 
+  <!-- Hero Image -->
   <section class="text-center my-4">
-    <img src="/images/ocean.png" alt="Ocean scenery" class="img-fluid rounded shadow-sm" style="max-width:900px;">
+    <img src="/images/ocean.png"
+         class="img-fluid rounded shadow-sm"
+         style="max-width: 1400px;">
   </section>
 </main>
 
 <%- include ./partials/footer.ejs %>
+

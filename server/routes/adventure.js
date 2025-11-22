@@ -93,7 +93,7 @@ router.get('/edit/:id',async(req,res,next)=>{
 })
 
 // Post route for processing the Edit Page - Update Operation
-router.post('/edit/:id',async(req,res,next)=>{   // ← changed GET to POST
+router.post('/edit/:id',async(req,res,next)=>{  
     try
     {
         let id = req.params.id;
