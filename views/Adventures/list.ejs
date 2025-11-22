@@ -1,0 +1,35 @@
+<%- include ./partials/header.ejs %>
+<%- include ./partials/main_nav.ejs %>
+<!--Main content for displaying my database-->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Country</th>
+                    <th class="text-center col-2">Cities to Visit</th>
+                    <th class="text-center col-2">Tourist Attractions</th>
+                    <th class="text-center col-2">Foods to Try</th>
+                    <th class="text-center col-2">Budget</th>
+                    <th class="text-center col-2">Notes</th>
+                </tr>
+                <!--for/while loop-->
+                <% for(let count=0; count<AdventureRecord.length;count++) { %>
+                <tr class="d-flex">
+                    <td class="text-center col-2"><%= AdventureRecord[count].country %></td>
+                    <td class="text-center col-2"><%= AdventureRecord[count].city %></td>
+                    <td class="text-center col-2"><%= AdventureRecord[count].touristAttractions %></td>
+                    <td class="text-center col-2"><%= AdventureRecord[count].food %></td>
+                    <td class="text-center col-2"><%= AdventureRecord[count].budget %></td>
+                    <td class="text-center col-2"><%= AdventureRecord[count].notes %></td>
+                </tr>
+
+            <% } %>
+            
+        </div>
+    </div>
+</main>
+<%- include ./partials/footer.ejs %>
