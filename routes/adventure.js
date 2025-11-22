@@ -7,13 +7,14 @@ let Adventure = require('../models/adventure')
 // post --> post something
 // put --> Edit/Update some data
 // delete --> Delete the data
+// CRUD --> Create, Read, Update & Delete
 
 router.get('/',async(req,res,next)=>{
     try
     {
         const AdventureRecord = await Adventure.find();
         //console.log(AdventureRecord);
-        res.render('adventure',{
+        res.render('Adventures/list',{
             title:'Adventures',
             AdventureRecord:AdventureRecord
         })

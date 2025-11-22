@@ -39,6 +39,16 @@
             <a class="nav-link" href="/contact"><i class="fa-regular fa-address-card"></i> Contact</a>
           <% } %>
         </li>
+
+                <li class="nav-item">
+          <% if (title == 'Adventures') { %>
+            <a class="nav-link active" href="/adventures"><i class="fa-solid fa-map-location-dot"></i></i> Adventures</a>
+          <% } else { %>
+            <a class="nav-link" href="/adventures"><i class="fa-solid fa-map-location-dot"></i></i> Adventures</a>
+          <% } %>
+        </li>
+
+
       </ul>
     </div>
   </div>
