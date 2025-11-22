@@ -1,0 +1,78 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!--Content for adding the book-->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1><%= title %></h1>
+
+      <form class="form" method="post">
+        <div class="form-group">
+          <label for="countryTextField">Country</label>
+          <input type="text" class="form-control"
+                 id="countryTextField"
+                 name="country"
+                 placeholder="Enter country name here"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="cityTextField">Cities to Visit</label>
+          <input type="text" class="form-control"
+                 id="cityTextField"
+                 name="city"
+                 placeholder="Enter cities here"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="touristattractionsTextField">Tourist Attractions</label>
+          <input type="text" class="form-control"
+                 id="touristattractionsTextField"
+                 name="touristAttractions"
+                 placeholder="Enter tourist attractions here"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="foodTextField">Foods to Try</label>
+          <input type="text" class="form-control"
+                 id="foodTextField"
+                 name="food"
+                 placeholder="Enter foods here"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="budgetTextField">Budget</label>
+          <input type="text" class="form-control"
+                 id="budgetTextField"
+                 name="budget"
+                 placeholder="Enter your budget here"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="notesTextField">Notes</label>
+          <input type="text" class="form-control"
+                 id="notesTextField"
+                 name="notes"
+                 placeholder="Enter notes here"
+                 required>
+        </div>
+
+        <br>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i> Submit
+        </button>
+        <a href="/adventures" class="btn btn-warning">
+          <i class="fas fa-undo"></i> Cancel
+        </a>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<%- include ../partials/footer.ejs %>
