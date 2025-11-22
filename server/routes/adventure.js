@@ -120,7 +120,20 @@ router.post('/edit/:id',async(req,res,next)=>{   // ← changed GET to POST
 
 // Get route for performing delete operation - Delete Operation
 router.get('/delete/:id',async(req,res,next)=>{
-
+    try
+    {
+        let id = req.params.id;
+        Adventure.deleteOne({_id:id}).then(()=>{
+            res.redirect("/adventures")
+        })
+    }
+    catch(err)
+    {
+        console.error(err);
+        res.render('Adventures/list',{
+            error:'Error on server'
+        })
+    }
 })
 
 module.exports = router;
